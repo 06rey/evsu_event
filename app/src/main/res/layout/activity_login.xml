@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="java.lang.String"/>
+        <variable
+            name="username"
+            type="String" />
+        <variable
+            name="password"
+            type="String" />
+    </data>
+
+    <LinearLayout android:id="@+id/root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        tools:context=".ui.auth.LoginActivity">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="0dp"
+            android:orientation="vertical">
+
+            <!--======================== LOGIN FORM ===================================-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@drawable/evsu_campus"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/blur">
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_centerInParent="true"
+                        app:srcCompat="@drawable/evsu" />
+                </RelativeLayout>
+
+                <!-- CONFIGURATION -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/btn_hostname"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_margin="10dp"
+                        android:background="@drawable/gear"
+                        android:onClick="onClickBtnSetting" />
+
+                </LinearLayout>
+
+                <!-- LOGIN FIELD -->
+                <LinearLayout
+                    android:id="@+id/form"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:padding="40dp">
+
+                    <EditText
+                        android:id="@+id/et_username"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/et_line"
+                        android:drawableLeft="@drawable/user"
+                        android:drawablePadding="10dp"
+                        android:enabled="true"
+                        android:hint="Username"
+                        android:text="@={ username }"
+                        android:textColor="@color/dimGray"
+                        android:textColorHint="@color/lightGray"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/et_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/et_line"
+                        android:drawableLeft="@drawable/lock"
+                        android:drawablePadding="10dp"
+                        android:enabled="true"
+                        android:hint="Password"
+                        android:inputType="textPassword"
+                        android:text="@={ password }"
+                        android:textColor="@color/dimGray"
+                        android:textColorHint="@color/lightGray"
+                        android:textSize="18sp" />
+
+                    <Button
+                        android:id="@+id/btn_login"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="40dp"
+                        android:background="@drawable/primary"
+                        android:onClick="onClickLogin"
+                        android:text="Login"
+                        android:textColor="@color/white" />
+
+
+                </LinearLayout>
+                <!-- LOGIN FIELD -->
+
+            </LinearLayout>
+            <!--======================== LOGIN FORM ===================================-->
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">EVSU Event</string>
+    <string name="vertical_ellipsis">&#8942;</string>
+    <string name="delete_notification">Delete notification</string>
+    <string name="title_activity_main2">Main2Activity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
